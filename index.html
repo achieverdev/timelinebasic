@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>        
+        <title>TimeLine</title>        
+        <meta charset="UTF-8">
+         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>   
+        <link rel="stylesheet" href="main.css" />              
+        <meta name="viewport" content="width=device-width">
+        <script type="text/javascript">//<![CDATA[ 
+            $(window).load(function()
+            {                
+                    $(".timelineitem").hover(function () 
+                    {                        
+                        $(".timelineitem").removeClass("active");
+                        $(this).toggleClass("active");
+                        $(this).prev(".timelineitem").toggleClass("close");
+                        $(this).next(".timelineitem").toggleClass("close");
+                    });
+            });//]]>  
+        </script>
+    </head>
+    
+    <body>
+        <div class="timelineHolder">
+            <div class="timelineitem">
+                <div class="headlinetitle">2013<span class="markerpoint"><span class="markerdotpoint"></span></span></div>
+                <div class="headlineinfo">jan 1</div>
+            </div>            
+            <div class="timelineitem active">
+                <div class="headlinetitle">2013<span class="markerpoint"><span class="markerdotpoint"></span></span></div>
+                <div class="headlineinfo">feb 2</div>
+            </div>
+            <div class="timelineitem">
+                <div class="headlinetitle">2013<span class="markerpoint"><span class="markerdotpoint"></span></span></div>
+                <div class="headlineinfo">march 3</div>
+            </div>
+            <div class="timelineitem">
+                <div class="headlinetitle">2013<span class="markerpoint"><span class="markerdotpoint"></span></span></div>
+                <div class="headlineinfo">april 4</div>
+            </div>
+            <div class="timelineitem">
+                <div class="headlinetitle">2013<span class="markerpoint"><span class="markerdotpoint"></span></span></div>
+                <div class="headlineinfo">may 5</div>
+            </div>
+        </div>
+    </body>
+</html>
